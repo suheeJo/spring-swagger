@@ -18,6 +18,8 @@ public class Initizlizer implements WebApplicationInitializer{
 		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
         rootContext.register(RootConfig.class);
         servletContext.addListener(new ContextLoaderListener(rootContext));
+        
+        servletContext.addFilter("SwaggerCORSFilter", SwaggerCORSFilter.class).addMappingForUrlPatterns(null, false, "/*"); // swagger cors
  
         this.addDispatcherServlet(servletContext);
         this.addUtf8CharacterEncodingFilter(servletContext);
