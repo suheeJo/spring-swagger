@@ -22,6 +22,14 @@
 	    </repository>
 	</repositories>
 	<dependencies>
+		<!-- Project Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.4</version>
+			<scope>provided</scope>
+		</dependency>
+	
 		<!-- Jackson Core -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
